@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     Animator anim;
     public bool moving = false;
-
+    public bool jumping = false;
 
     //Movement Variables
     Rigidbody2D rb; //create reference for rigidbody bc jump requires physics
@@ -57,17 +57,27 @@ public class Player : MonoBehaviour
         if ((Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumping = true;
+
+        }
+        else 
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+            jumping = false;
+
         }
 
-        if (Input.GetKeyDown("a") || Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+
+        if (!Input.GetKey("a") && !Input.GetKey("d") && !Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
         {
             moving = false;
         }
-
+        anim.SetBool("isJumping", jumping);
         anim.SetBool("isMoving", moving);
         transform.position = newPosition;
+        Debug.Log(transform.position);
         transform.localScale = newScale;
-
+        Debug.Log(isGrounded);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
