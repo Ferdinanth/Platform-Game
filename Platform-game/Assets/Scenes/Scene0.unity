@@ -2468,7 +2468,7 @@ Transform:
   m_GameObject: {fileID: 1533839025}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.84, y: -1.55, z: 0}
+  m_LocalPosition: {x: 4.24, y: -1, z: 0}
   m_LocalScale: {x: 0.11174136, y: 0.7184387, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2828,8 +2828,8 @@ GameObject:
   - component: {fileID: 1783373193}
   - component: {fileID: 1783373195}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: player
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2935,10 +2935,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.5
+  m_GravityScale: 6
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -2964,8 +2964,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moving: 0
   jumping: 0
-  jumpForce: 3
-  speed: 0.15
+  jumpForce: 25
+  speed: 0.05
   groundLayer:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3659,5 +3659,5 @@ SceneRoots:
   - {fileID: 1773442736}
   - {fileID: 1809435009}
   - {fileID: 1107663490}
-  - {fileID: 1783373192}
   - {fileID: 519420032}
+  - {fileID: 1783373192}
