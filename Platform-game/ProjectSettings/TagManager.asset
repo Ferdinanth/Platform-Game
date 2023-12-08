@@ -8,6 +8,9 @@ TagManager:
   - door
   - ground
   - player
+  - Pit
+  - fight
+  - Exit
   layers:
   - Default
   - TransparentFX

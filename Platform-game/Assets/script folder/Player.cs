@@ -87,6 +87,18 @@ public class player : MonoBehaviour
             SceneManager.LoadScene(1);
         }
 
+        if (collision.gameObject.tag.Equals("fight"))
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(2);
+        }
+
+        if(collision.gameObject.tag.Equals("Exit"))
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(3);
+        }
+
     }
 }
 
