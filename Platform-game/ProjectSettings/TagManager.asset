@@ -11,6 +11,8 @@ TagManager:
   - Pit
   - fight
   - Exit
+  - playerEnemy
+  - projectile
   layers:
   - Default
   - TransparentFX
